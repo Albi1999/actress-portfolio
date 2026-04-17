@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light dark;
+  --bg: #f5efe5;
+  --surface: rgba(255, 255, 255, 0.72);
+  --surface-strong: rgba(255, 255, 255, 0.9);
+  --text-main: #1b232d;
+  --text-muted: #4e5a68;
+  --accent: #1f7488;
+  --accent-contrast: #f7fafc;
+  --ring: rgba(31, 116, 136, 0.35);
+}
+
+.dark {
+  --bg: #081019;
+  --surface: rgba(17, 29, 43, 0.75);
+  --surface-strong: rgba(20, 36, 53, 0.9);
+  --text-main: #ecf2f7;
+  --text-muted: #b2c0ce;
+  --accent: #6fc9db;
+  --accent-contrast: #071a22;
+  --ring: rgba(111, 201, 219, 0.45);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+  color: var(--text-main);
+  background: var(--bg);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid var(--ring);
+  outline-offset: 2px;
+}
+
+::selection {
+  background: rgba(255, 161, 125, 0.32);
+}
+
+.ambient {
+  background-image: theme("backgroundImage.ambient-light");
+}
+
+.dark .ambient {
+  background-image: theme("backgroundImage.ambient-dark");
+}
+
+.glass {
+  background: var(--surface);
+  backdrop-filter: blur(10px);
+}
+
+.glass-strong {
+  background: var(--surface-strong);
+  backdrop-filter: blur(12px);
+}
+
+.section-shell {
+  @apply rounded-3xl border border-white/30 p-5 sm:p-8;
+  background: var(--surface);
+}
+
+.title-display {
+  font-family: "Cormorant Garamond", serif;
+  letter-spacing: 0.02em;
+}
