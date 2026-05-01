@@ -23,27 +23,71 @@ export default function AboutPage() {
             </h2>
             <dl className="mt-5 grid gap-4 text-sm sm:grid-cols-2">
               <div>
-                <dt className="font-bold">Nome artistico</dt>
-                <dd className="text-[color:var(--text-muted)]">
-                  {profile.stageName}
-                </dd>
-              </div>
-              <div>
-                <dt className="font-bold">Nome completo</dt>
+                <dt className="font-bold">Nome e cognome</dt>
                 <dd className="text-[color:var(--text-muted)]">
                   {profile.legalName}
                 </dd>
               </div>
               <div>
-                <dt className="font-bold">Base</dt>
+                <dt className="font-bold">Domicilio</dt>
                 <dd className="text-[color:var(--text-muted)]">
                   {profile.city}
                 </dd>
               </div>
               <div>
+                <dt className="font-bold">Data di nascita</dt>
+                <dd className="text-[color:var(--text-muted)]">
+                  {profile.birthDate}
+                </dd>
+              </div>
+              <div>
+                <dt className="font-bold">Luogo di nascita</dt>
+                <dd className="text-[color:var(--text-muted)]">
+                  {profile.birthPlace}
+                </dd>
+              </div>
+              <div>
                 <dt className="font-bold">Lingue</dt>
                 <dd className="text-[color:var(--text-muted)]">
-                  {profile.languages.join(" • ")}
+                  <ul className="list-disc space-y-1 pl-4">
+                    {profile.languages.map((language) => (
+                      <li key={language}>{language}</li>
+                    ))}
+                  </ul>
+                </dd>
+              </div>
+            </dl>
+
+            <h3 className="mt-8 text-lg font-bold">Misure</h3>
+            <dl className="mt-3 grid gap-4 text-sm sm:grid-cols-2">
+              <div>
+                <dt className="font-bold">Altezza</dt>
+                <dd className="text-[color:var(--text-muted)]">
+                  {profile.heightCm} cm
+                </dd>
+              </div>
+              <div>
+                <dt className="font-bold">Peso</dt>
+                <dd className="text-[color:var(--text-muted)]">
+                  {profile.weightKg} kg
+                </dd>
+              </div>
+              <div>
+                <dt className="font-bold">Taglia pantaloni</dt>
+                <dd className="text-[color:var(--text-muted)]">
+                  {profile.pantsSize}
+                </dd>
+              </div>
+              <div>
+                <dt className="font-bold">Taglia giacca</dt>
+                <dd className="text-[color:var(--text-muted)]">
+                  {profile.jacketSize}
+                </dd>
+              </div>
+              <div>
+                <dt className="font-bold">Numero scarpe</dt>
+                <dd className="text-[color:var(--text-muted)]">
+                  {profile.shoesSize}
                 </dd>
               </div>
             </dl>
@@ -53,12 +97,24 @@ export default function AboutPage() {
               {profile.skills.map((skill) => (
                 <li
                   key={skill}
-                  className="rounded-xl border border-white/30 bg-white/20 px-3 py-2 text-sm"
+                  className="rounded-xl border border-white/30 bg-white/20 px-3 py-2 text-sm dark:border-white/10 dark:bg-petrol-800/80 dark:text-white"
                 >
                   {skill}
                 </li>
               ))}
             </ul>
+
+            <h3 className="mt-8 text-lg font-bold">Interessi artistici</h3>
+            <div className="mt-3 flex flex-wrap gap-2">
+              {profile.interests.map((interest) => (
+                <span
+                  key={interest}
+                  className="rounded-full border border-white/35 bg-gradient-to-r from-peach-100/70 to-white/40 px-3 py-1 text-xs font-semibold text-[color:var(--text-muted)] dark:border-white/10 dark:bg-petrol-800/80 dark:text-white"
+                >
+                  {interest}
+                </span>
+              ))}
+            </div>
           </article>
 
           <article className="section-shell shadow-soft">

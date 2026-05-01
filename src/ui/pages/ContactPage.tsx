@@ -3,6 +3,10 @@ import { profile } from "../../data/content";
 import { SectionIntro } from "../components/SectionIntro";
 
 export default function ContactPage() {
+  const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(
+    profile.email,
+  )}`;
+
   return (
     <>
       <Helmet>
@@ -13,7 +17,7 @@ export default function ContactPage() {
         <SectionIntro
           eyebrow="Contatti"
           title="Contattami direttamente"
-          description="Per casting, collaborazioni e richieste professionali. Il form e pronto per Netlify Forms."
+          description="Per casting, collaborazioni e richieste professionali. Il contatto avviene via Gmail o email diretta."
         />
 
         <div className="grid gap-5 lg:grid-cols-[1fr,1.1fr]">
@@ -48,55 +52,31 @@ export default function ContactPage() {
           </aside>
 
           <article className="section-shell shadow-soft">
-            <form
-              name="contact"
-              method="POST"
-              data-netlify="true"
-              netlify-honeypot="bot-field"
-              className="grid gap-4"
-            >
-              <input type="hidden" name="form-name" value="contact" />
-              <input type="hidden" name="bot-field" />
-
-              <label className="grid gap-1">
-                <span className="text-sm font-semibold">Nome</span>
-                <input
-                  required
-                  type="text"
-                  name="name"
-                  autoComplete="name"
-                  className="rounded-xl border border-white/40 bg-white/60 px-3 py-2 text-sm text-black placeholder:text-slate-500"
-                />
-              </label>
-
-              <label className="grid gap-1">
-                <span className="text-sm font-semibold">Email</span>
-                <input
-                  required
-                  type="email"
-                  name="email"
-                  autoComplete="email"
-                  className="rounded-xl border border-white/40 bg-white/60 px-3 py-2 text-sm text-black placeholder:text-slate-500"
-                />
-              </label>
-
-              <label className="grid gap-1">
-                <span className="text-sm font-semibold">Messaggio</span>
-                <textarea
-                  required
-                  name="message"
-                  rows={5}
-                  className="rounded-xl border border-white/40 bg-white/60 px-3 py-2 text-sm text-black placeholder:text-slate-500"
-                />
-              </label>
-
-              <button
-                type="submit"
-                className="rounded-xl bg-petrol-600 px-4 py-2 text-sm font-bold text-white transition hover:bg-petrol-700"
-              >
-                Invia richiesta
-              </button>
-            </form>
+            <div className="grid gap-4">
+              <div>
+                <h3 className="text-lg font-bold">Invia una richiesta</h3>
+                <p className="mt-2 text-sm text-[color:var(--text-muted)]">
+                  Premi il pulsante per aprire Gmail con l'indirizzo gia
+                  compilato, oppure usa il tuo client email preferito.
+                </p>
+              </div>
+              <div className="flex flex-wrap gap-3">
+                <a
+                  href={gmailLink}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="rounded-xl bg-petrol-600 px-4 py-2 text-sm font-bold text-white transition hover:bg-petrol-700 dark:bg-peach-400 dark:text-black dark:hover:bg-peach-300"
+                >
+                  Apri Gmail
+                </a>
+                <a
+                  href={`mailto:${profile.email}`}
+                  className="rounded-xl border border-white/40 bg-white/30 px-4 py-2 text-sm font-bold text-[color:var(--text-main)] transition hover:bg-white/50 dark:border-white/20 dark:bg-white/10 dark:text-white dark:hover:bg-white/20"
+                >
+                  Apri Email
+                </a>
+              </div>
+            </div>
           </article>
         </div>
       </section>

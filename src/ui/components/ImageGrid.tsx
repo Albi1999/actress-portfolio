@@ -35,8 +35,8 @@ export function ImageGrid({ images }: ImageGridProps) {
               className={[
                 "rounded-full border px-4 py-1.5 text-sm font-semibold capitalize transition",
                 activeFilter === filter
-                  ? "border-transparent bg-petrol-500 text-white"
-                  : "border-white/40 bg-white/20 text-[color:var(--text-main)]",
+                  ? "border-transparent bg-petrol-500 text-white dark:bg-peach-300 dark:text-slate-900"
+                  : "border-white/40 bg-white/20 text-[color:var(--text-main)] dark:border-white/20 dark:bg-white/10 dark:text-white/90",
               ].join(" ")}
             >
               {filter}
@@ -45,22 +45,22 @@ export function ImageGrid({ images }: ImageGridProps) {
         )}
       </div>
 
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="columns-1 gap-4 sm:columns-2 lg:columns-3">
         {filtered.map((image, index) => (
           <button
             key={image.id}
             type="button"
-            className="group relative overflow-hidden rounded-2xl border border-white/30 text-left shadow-soft"
+            className="group relative mb-4 w-full break-inside-avoid overflow-hidden rounded-2xl border border-white/30 text-left shadow-soft"
             onClick={() => setOpenIndex(index)}
             aria-label={`Apri immagine: ${image.alt}`}
           >
-            <div className="relative h-80 w-full bg-gradient-to-br from-base-100 to-base-300/40 dark:from-petrol-900 dark:to-petrol-700/50">
+            <div className="relative w-full bg-gradient-to-br from-base-100 to-base-300/40 dark:from-petrol-900 dark:to-petrol-700/50">
               {!failed[image.id] ? (
                 <img
                   src={image.thumb}
                   alt={image.alt}
                   loading="lazy"
-                  className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                  className="w-full object-cover transition duration-500 group-hover:scale-105"
                   onError={() =>
                     setFailed((prev) => ({
                       ...prev,
@@ -69,7 +69,7 @@ export function ImageGrid({ images }: ImageGridProps) {
                   }
                 />
               ) : (
-                <div className="flex h-full items-center justify-center px-6 text-center text-sm font-semibold text-[color:var(--text-muted)]">
+                <div className="flex min-h-[220px] items-center justify-center px-6 text-center text-sm font-semibold text-[color:var(--text-muted)]">
                   Inserisci questo file in public/assets/images per vedere
                   l'anteprima.
                 </div>

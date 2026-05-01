@@ -59,10 +59,27 @@ a {
 
 .ambient {
   background-image: theme("backgroundImage.ambient-light");
+  position: relative;
 }
 
 .dark .ambient {
   background-image: theme("backgroundImage.ambient-dark");
+}
+
+.ambient::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image: repeating-linear-gradient(
+    120deg,
+    rgba(0, 0, 0, 0.08) 0,
+    rgba(0, 0, 0, 0.08) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+  opacity: 0.12;
+  mix-blend-mode: soft-light;
 }
 
 .glass {

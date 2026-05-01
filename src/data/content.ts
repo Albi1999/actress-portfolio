@@ -14,13 +14,27 @@ export type ProfileData = {
   legalName: string;
   roleTagline: string;
   city: string;
+  birthDate: string;
+  birthPlace: string;
+  heightCm: number;
+  weightKg: number;
+  pantsSize: string;
+  jacketSize: string;
+  shoesSize: string;
+  heroVideoSrc?: string;
+  heroPosterSrc?: string;
   languages: string[];
   skills: string[];
+  interests: string[];
   email: string;
   phone: string;
   intro: string;
   bio: string[];
   showreelVideoId: string;
+  highlights: {
+    title: string;
+    description: string;
+  }[];
   portraitImages: {
     src: string;
     alt: string;
@@ -52,45 +66,90 @@ export type CvEntry = {
 };
 
 export const profile: ProfileData = {
-  stageName: "Sofia Rossi",
-  legalName: "Sofia Rossi",
-  roleTagline: "Attrice | Performer | Storyteller",
-  city: "Roma, Italia",
-  languages: ["Italiano (madrelingua)", "Inglese (fluente)", "Spagnolo (base)"],
-  skills: [
-    "Recitazione teatrale",
-    "Recitazione davanti alla camera",
-    "Dizione",
-    "Danza contemporanea",
-    "Canto",
-    "Improvvisazione",
+  stageName: "Sofia La Mastra",
+  legalName: "Sofia La Mastra",
+  roleTagline: "Attrice | Cinema e Teatro",
+  city: "Padova",
+  birthDate: "23/10/2002",
+  birthPlace: "Caltagirone (CT)",
+  heightCm: 156,
+  weightKg: 45,
+  pantsSize: "36-38 (IT)",
+  jacketSize: "38",
+  shoesSize: "36",
+  heroVideoSrc: "/assets/video/hero-showreel.mp4",
+  heroPosterSrc: "/assets/images/WhatsApp Image 2026-05-01 at 12.38.22.jpeg",
+  languages: [
+    "Italiano (madrelingua)",
+    "Dialetto siciliano",
+    "Inglese (B2 - Cambridge English B2 First)",
+    "Francese (B2 - DELF B2)",
   ],
-  email: "hello@sofiarossi.com",
-  phone: "+39 333 123 4567",
+  skills: [
+    "Recitazione cinematografica",
+    "Improvvisazione teatrale",
+    "Monologhi e presenza scenica",
+    "Movimento scenico",
+    "Canto",
+    "Violino (livello base)",
+  ],
+  interests: [
+    "Lettura e scrittura creativa",
+    "Canto corale",
+    "Violino e background musicale",
+    "Disegno e arti visive",
+  ],
+  email: "sofialamastra@gmail.com",
+  phone: "+39 3286997020",
   intro:
-    "Una presenza scenica elegante, intensa e autentica. Sofia unisce precisione tecnica e sensibilita emotiva per dare vita a personaggi memorabili.",
+    "Studentessa di psicologia con una profonda passione per cinema e teatro, Sofia porta in scena autenticita, vulnerabilita e un'energia intensa.",
   bio: [
-    "Sofia e un'attrice emergente con base a Roma, formata tra teatro contemporaneo e camera acting. Il suo percorso artistico nasce dal teatro e si evolve in produzioni indipendenti e audiovisive.",
-    "Nel suo lavoro ricerca verita emotiva, ritmo e profondita, con una particolare attenzione ai personaggi femminili complessi e alle storie a forte impatto umano.",
+    "Sin da bambina Sofia nutre una grande passione per cinema e teatro, che considera un modo per vivere molte vite e raccontare la propria umanita.",
+    "Quando recita si sente pienamente viva: mette a nudo la propria storia e un lato piu folle e strambo che diventa forza scenica, sia sul palcoscenico che davanti alla telecamera.",
+    "Oltre alla recitazione coltiva la lettura e la scrittura creativa, il canto corale, il violino e le arti visive.",
   ],
   showreelVideoId: "dQw4w9WgXcQ",
+  highlights: [
+    {
+      title: "Recitazione cinematografica",
+      description:
+        "Percorso attivo con cortometraggio finale per sviluppare presenza e ritmo in camera.",
+    },
+    {
+      title: "Improvvisazione teatrale",
+      description:
+        "Allenamento costante alla spontaneita, al gioco scenico e all'ascolto dell'altro.",
+    },
+    {
+      title: "Voce e musicalita",
+      description:
+        "Canto corale e studio del violino per rafforzare sensibilita e controllo vocale.",
+    },
+    {
+      title: "Scrittura e arti visive",
+      description:
+        "Passione per lettura e scrittura creativa, con attenzione a dettagli visivi e poetici.",
+    },
+  ],
   portraitImages: [
     {
-      src: "/assets/images/hero/portrait-1.webp",
-      alt: "Primo piano artistico in luce naturale",
+      src: "/assets/images/WhatsApp Image 2026-05-01 at 12.38.22.jpeg",
+      alt: "Ritratto di Sofia",
     },
     {
-      src: "/assets/images/hero/portrait-2.webp",
-      alt: "Ritratto editoriale con look cinematografico",
+      src: "/assets/images/WhatsApp Image 2026-05-01 at 12.38.22.jpeg",
+      alt: "Ritratto di Sofia",
     },
     {
-      src: "/assets/images/hero/portrait-3.webp",
-      alt: "Ritratto drammatico in studio",
+      src: "/assets/images/WhatsApp Image 2026-05-01 at 12.38.22.jpeg",
+      alt: "Ritratto di Sofia",
     },
   ],
   socials: [
-    { label: "Instagram", url: "https://instagram.com" },
-    { label: "IMDb", url: "https://www.imdb.com" },
+    {
+      label: "Instagram",
+      url: "https://www.instagram.com/sofia_la_mastra?igsh=MnF2emRrM2o3eGlj",
+    },
   ],
   quickLinks: [
     {
@@ -180,22 +239,33 @@ export const videos: PortfolioVideo[] = [
 
 export const cvEntries: CvEntry[] = [
   {
-    year: "2025",
-    title: "Workshop Camera Acting",
-    subtitle: "Studio Professionale Roma",
-    details: "Training intensivo su recitazione cinematografica e self tape.",
+    year: "2025 - attuale",
+    title: "Corso di recitazione cinematografica",
+    subtitle: "Associazione Culturale Fantalica, Padova",
+    details: "Percorso con cortometraggio finale.",
   },
   {
-    year: "2024",
-    title: "Cortometraggio Indipendente",
-    subtitle: "Ruolo Protagonista",
-    details: "Interpretazione del personaggio principale in un progetto drama.",
+    year: "2025 - attuale",
+    title: "Corso di improvvisazione teatrale",
+    subtitle: "Teatro Believe, Padova",
+    details: "Percorso con spettacolo finale.",
   },
   {
-    year: "2023",
-    title: "Accademia Teatrale",
-    subtitle: "Percorso Triennale",
-    details:
-      "Formazione in movimento scenico, voce, improvvisazione e drammaturgia.",
+    year: "2022 - 2024",
+    title: "Corso di teatro",
+    subtitle: "Teatro di Sacco, Perugia",
+    details: "Spettacoli finali rivolti a scuole superiori.",
+  },
+  {
+    year: "2019 - 2020",
+    title: "Lezioni individuali",
+    subtitle: "Acting coach Anna Redi",
+    details: "Preparazione monologhi e movimento scenico.",
+  },
+  {
+    year: "2016 - 2018",
+    title: "Corso di teatro francofono",
+    subtitle: "Liceo linguistico Bonaventura Secusio, Caltagirone",
+    details: "Formazione teatrale in lingua francese.",
   },
 ];
