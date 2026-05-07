@@ -87,4 +87,3 @@ Il progetto include gia:
 - Lazy loading immagini e chunk splitting tramite route lazy
 - Theme toggle persistente con localStorage
 - Layout ottimizzato mobile-first
-

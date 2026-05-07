@@ -50,6 +50,7 @@ export default function HomePage() {
             {profile.heroVideoSrc && heroVideoAvailable ? (
               <video
                 className="absolute inset-0 h-full w-full object-cover"
+                style={{ objectPosition: "50% 35%" }}
                 autoPlay
                 muted
                 loop
@@ -64,6 +65,7 @@ export default function HomePage() {
                 src={heroPoster}
                 alt={`Ritratto di ${profile.stageName}`}
                 className="absolute inset-0 h-full w-full object-cover"
+                style={{ objectPosition: "50% 35%" }}
                 loading="lazy"
               />
             ) : null}
@@ -187,7 +189,7 @@ export default function HomePage() {
                       ? "50% 18%"
                       : index === 1
                         ? "50% 40%"
-                        : "50% 65%",
+                        : "50% 22%",
                 }}
                 onError={(event) => {
                   event.currentTarget.style.display = "none";
