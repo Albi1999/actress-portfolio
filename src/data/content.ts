@@ -108,7 +108,7 @@ export const profile: ProfileData = {
     "Quando recita si sente pienamente viva: mette a nudo la propria storia e un lato piu folle e strambo che diventa forza scenica, sia sul palcoscenico che davanti alla telecamera.",
     "Oltre alla recitazione coltiva la lettura e la scrittura creativa, il canto corale, il violino e le arti visive.",
   ],
-  showreelVideoId: "dQw4w9WgXcQ",
+  showreelVideoId: "1ssGqO9jae0",
   highlights: [
     {
       title: "Recitazione cinematografica",
@@ -211,22 +211,17 @@ export const galleryImages: GalleryImage[] = [
 export const videos: PortfolioVideo[] = [
   {
     id: "showreel-2026",
-    title: "Showreel 2026",
+    title: "Monologo tratto da \"Mommy\"",
     description:
-      "Una selezione di scene recenti tra cinema indipendente e short film.",
-    youtubeVideoId: "dQw4w9WgXcQ",
+      "Monologo registrato in workshop presso l'Associazione Nazionale Arti Performative, sotto la direzione di Giulia Appolloni (casting director).",
+    youtubeVideoId: "1ssGqO9jae0",
   },
   {
     id: "monologue-studio",
-    title: "Monologo in Studio",
-    description: "Studio su testo contemporaneo, camera close-up.",
-    youtubeVideoId: "ysz5S6PUM-U",
-  },
-  {
-    id: "selftape-drama",
-    title: "Self Tape - Drama",
-    description: "Self tape in italiano per casting televisivo.",
-    youtubeVideoId: "aqz-KE-bpKQ",
+    title: "Dialogo tratto da \"Puoi baciare lo sposo\"",
+    description:
+      "Dialogo registrato in workshop presso l'Associazione Nazionale Arti Performative, sotto la direzione di Giulia Appolloni (casting director).",
+    youtubeVideoId: "g47-4mnFeys",
   },
 ];
 
