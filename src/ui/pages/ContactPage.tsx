@@ -17,7 +17,7 @@ export default function ContactPage() {
         <SectionIntro
           eyebrow="Contatti"
           title="Contattami direttamente"
-          description="Per casting, collaborazioni e richieste professionali. Il contatto avviene via Gmail o email diretta."
+          description="Per casting, collaborazioni e richieste professionali."
         />
 
         <div className="grid gap-5 lg:grid-cols-[1fr,1.1fr]">

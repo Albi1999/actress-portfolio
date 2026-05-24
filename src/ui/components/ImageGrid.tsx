@@ -76,7 +76,6 @@ export function ImageGrid({ images }: ImageGridProps) {
               )}
             </div>
             <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent px-4 pb-4 pt-10 text-white">
-              <p className="text-sm font-semibold">{image.alt}</p>
               <p className="text-xs uppercase tracking-[0.14em] text-white/80">
                 {image.category}
               </p>

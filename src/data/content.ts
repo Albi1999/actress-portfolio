@@ -102,33 +102,37 @@ export const profile: ProfileData = {
   email: "sofialamastra@gmail.com",
   phone: "+39 3286997020",
   intro:
-    "Studentessa di psicologia con una profonda passione per cinema e teatro, Sofia porta in scena autenticita, vulnerabilita e un'energia intensa.",
+    "Studentessa di psicologia con una profonda passione per cinema e teatro, Sofia porta in scena autenticità, vulnerabilità e un'energia intensa.",
   bio: [
-    "Sin da bambina Sofia nutre una grande passione per cinema e teatro, che considera un modo per vivere molte vite e raccontare la propria umanita.",
-    "Quando recita si sente pienamente viva: mette a nudo la propria storia e un lato piu folle e strambo che diventa forza scenica, sia sul palcoscenico che davanti alla telecamera.",
-    "Oltre alla recitazione coltiva la lettura e la scrittura creativa, il canto corale, il violino e le arti visive.",
+    "Attrice in formazione con un percorso solido tra teatro e camera, Sofia crea interpretazioni sincere e una presenza naturale che attraversa generi e linguaggi.",
+    "La sua recitazione nasce dall'ascolto, da un preciso lavoro sul dettaglio emotivo e da una curiosità costante verso i personaggi che interpreta.",
+    "Oltre al palco e alla sala di ripresa, continua a investire in studio, scrittura creativa e pratiche espressive che arricchiscono il suo linguaggio performativo.",
   ],
   showreelVideoId: "1ssGqO9jae0",
   highlights: [
     {
       title: "Recitazione cinematografica",
       description:
-        "Percorso attivo con cortometraggio finale per sviluppare presenza e ritmo in camera.",
+        ""
+   //     "Percorso attivo con cortometraggio finale per sviluppare presenza e ritmo in camera.",
     },
     {
       title: "Improvvisazione teatrale",
       description:
-        "Allenamento costante alla spontaneita, al gioco scenico e all'ascolto dell'altro.",
+        ""
+     //   "Allenamento costante alla spontaneita, al gioco scenico e all'ascolto dell'altro.",
     },
     {
       title: "Voce e musicalita",
       description:
-        "Canto corale e studio del violino per rafforzare sensibilita e controllo vocale.",
+        ""
+      //  "Canto corale e studio del violino per rafforzare sensibilita e controllo vocale.",
     },
     {
       title: "Scrittura e arti visive",
       description:
-        "Passione per lettura e scrittura creativa, con attenzione a dettagli visivi e poetici.",
+        ""
+    //    "Passione per lettura e scrittura creativa, con attenzione a dettagli visivi e poetici.",
     },
   ],
   portraitImages: [
@@ -155,17 +159,17 @@ export const profile: ProfileData = {
     {
       label: "Galleria Fotografica",
       path: "/galleria",
-      description: "Selezione di scatti editoriali, scena e backstage",
+      description: "",
     },
     {
       label: "Video e Showreel",
       path: "/video",
-      description: "Clip private YouTube integrate direttamente nel sito",
+      description: "",
     },
     {
       label: "Profilo e Curriculum",
       path: "/profilo",
-      description: "Formazione, esperienze e competenze professionali",
+      description: "",
     },
   ],
 };
@@ -175,35 +179,119 @@ export const galleryImages: GalleryImage[] = [
     id: "ed-ritratto",
     src: "/assets/images/ritratto.jpg",
     thumb: "/assets/images/ritratto.jpg",
-    alt: "Ritratto in studio",
+    alt: "Foto di Sofia La Mastra",
     category: "editoriale",
   },
   {
     id: "ed-ritratto-dettaglio",
     src: "/assets/images/ritratto_dettaglio.jpg",
     thumb: "/assets/images/ritratto_dettaglio.jpg",
-    alt: "Ritratto dettaglio",
+    alt: "Foto di Sofia La Mastra",
     category: "editoriale",
   },
   {
     id: "ed-mezzo-busto",
     src: "/assets/images/mezzo_busto_seduta.jpg",
     thumb: "/assets/images/mezzo_busto_seduta.jpg",
-    alt: "Mezzo busto seduta",
+    alt: "Foto di Sofia La Mastra",
     category: "editoriale",
   },
   {
     id: "ed-figura-intera",
     src: "/assets/images/figura_intera.jpg",
     thumb: "/assets/images/figura_intera.jpg",
-    alt: "Figura intera in studio",
+    alt: "Foto di Sofia La Mastra",
     category: "editoriale",
   },
   {
     id: "ed-figura-intera-2",
     src: "/assets/images/figura_intera2.jpg",
     thumb: "/assets/images/figura_intera2.jpg",
-    alt: "Figura intera seconda posa",
+    alt: "Foto di Sofia La Mastra",
+    category: "editoriale",
+  },
+  {
+    id: "ig-4451-15",
+    src: "/assets/images/IG/Sofia%20La%20Mastra_@TG_DSC4451-15.jpg",
+    thumb: "/assets/images/IG/Sofia%20La%20Mastra_@TG_DSC4451-15.jpg",
+    alt: "Foto di Sofia La Mastra",
+    category: "editoriale",
+  },
+  {
+    id: "ig-4451-16",
+    src: "/assets/images/IG/Sofia%20La%20Mastra_@TG_DSC4451-16.jpg",
+    thumb: "/assets/images/IG/Sofia%20La%20Mastra_@TG_DSC4451-16.jpg",
+    alt: "Foto di Sofia La Mastra",
+    category: "editoriale",
+  },
+  {
+    id: "ig-4483-14",
+    src: "/assets/images/IG/Sofia%20La%20Mastra_@TG_DSC4483-14.jpg",
+    thumb: "/assets/images/IG/Sofia%20La%20Mastra_@TG_DSC4483-14.jpg",
+    alt: "Foto di Sofia La Mastra",
+    category: "editoriale",
+  },
+  {
+    id: "ig-5102-12",
+    src: "/assets/images/IG/Sofia%20La%20Mastra_@TG_DSC5102-12.jpg",
+    thumb: "/assets/images/IG/Sofia%20La%20Mastra_@TG_DSC5102-12.jpg",
+    alt: "Foto di Sofia La Mastra",
+    category: "editoriale",
+  },
+  {
+    id: "ig-5102-13",
+    src: "/assets/images/IG/Sofia%20La%20Mastra_@TG_DSC5102-13.jpg",
+    thumb: "/assets/images/IG/Sofia%20La%20Mastra_@TG_DSC5102-13.jpg",
+    alt: "Foto di Sofia La Mastra",
+    category: "editoriale",
+  },
+  {
+    id: "colore-5186-11",
+    src: "/assets/images/Colori/Sofia%20La%20Mastra_@TG_DSC5186-11.jpg",
+    thumb: "/assets/images/Colori/Sofia%20La%20Mastra_@TG_DSC5186-11.jpg",
+    alt: "Foto di Sofia La Mastra",
+    category: "editoriale",
+  },
+  {
+    id: "bn-4164-8",
+    src: "/assets/images/BN/Sofia%20La%20Mastra_@TG_DSC4164-8.jpg",
+    thumb: "/assets/images/BN/Sofia%20La%20Mastra_@TG_DSC4164-8.jpg",
+    alt: "Foto di Sofia La Mastra",
+    category: "editoriale",
+  },
+  {
+    id: "bn-4174-6",
+    src: "/assets/images/BN/Sofia%20La%20Mastra_@TG_DSC4174-6.jpg",
+    thumb: "/assets/images/BN/Sofia%20La%20Mastra_@TG_DSC4174-6.jpg",
+    alt: "Foto di Sofia La Mastra",
+    category: "editoriale",
+  },
+  {
+    id: "bn-4183-10",
+    src: "/assets/images/BN/Sofia%20La%20Mastra_@TG_DSC4183-10.jpg",
+    thumb: "/assets/images/BN/Sofia%20La%20Mastra_@TG_DSC4183-10.jpg",
+    alt: "Foto di Sofia La Mastra",
+    category: "editoriale",
+  },
+  {
+    id: "bn-4328-4",
+    src: "/assets/images/BN/Sofia%20La%20Mastra_@TG_DSC4328-4.jpg",
+    thumb: "/assets/images/BN/Sofia%20La%20Mastra_@TG_DSC4328-4.jpg",
+    alt: "Foto di Sofia La Mastra",
+    category: "editoriale",
+  },
+  {
+    id: "bn-4879-2",
+    src: "/assets/images/BN/Sofia%20La%20Mastra_@TG_DSC4879-2.jpg",
+    thumb: "/assets/images/BN/Sofia%20La%20Mastra_@TG_DSC4879-2.jpg",
+    alt: "Foto di Sofia La Mastra",
+    category: "editoriale",
+  },
+  {
+    id: "bn-5186-12",
+    src: "/assets/images/BN/Sofia%20La%20Mastra_@TG_DSC5186-12.jpg",
+    thumb: "/assets/images/BN/Sofia%20La%20Mastra_@TG_DSC5186-12.jpg",
+    alt: "Foto di Sofia La Mastra",
     category: "editoriale",
   },
 ];

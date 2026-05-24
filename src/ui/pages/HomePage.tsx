@@ -104,7 +104,7 @@ export default function HomePage() {
           <SectionIntro
             eyebrow="Portfolio"
             title="Identita artistica"
-            description="Un profilo elegante e contemporaneo, progettato per casting director e agenzie che cercano personalita autentiche."
+            description=""
           />
         </div>
 
